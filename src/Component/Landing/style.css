@@ -1,0 +1,81 @@
+.main-container {
+  margin-top: 200px;
+}
+
+.container .card-box {
+  width: 50%;
+  z-index: 1;
+}
+.card {
+  box-shadow: 1px 0px 20px -2px rgba(0, 0, 0, 0.28);
+  border-radius: 10px;
+  position: relative;
+}
+.card .nish {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 17, 0, 0.6);
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 10px 10px 20px #ffffff;
+}
+.card .sub {
+  border-radius: 5px;
+}
+.card .nish-title {
+  margin: 5px auto;
+  text-align: center;
+  width: 75%;
+  padding: 20px;
+  position: absolute;
+  top: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  color: white;
+  font-size: 30px;
+}
+.card ul {
+  margin-top: 70px;
+}
+.card ul .item-list {
+  margin: 5px 30px;
+  font-size: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  margin: -10px;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: 2;
+}
+.nav .nav-item {
+  list-style: none;
+}
+.nav .nav-item .nav-link {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 95% !important;
+    flex-direction: column;
+  }
+  .container .card-box {
+    width: 100%;
+  }
+}
