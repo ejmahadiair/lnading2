@@ -1,24 +1,24 @@
 import React from "react";
 import "./style.css";
 import { data } from "../Comon/data";
-
+import logo from "../Media/Image/8676D41F-1F9F-4D1A-AA0E-4CBEC516DA0F.png";
+import { Button, Form, Input } from "antd";
 const Index = () => {
   return (
     <>
-      <ul className="nav">
-        {data.map((item) => {
-          return (
-            <>
-              <li className="nav-item">
-                <a className="nav-link" href={`#${item?.left?.id}`}>
-                  {item?.left?.nish}
-                </a>
-              </li>
-            </>
-          );
-        })}
-      </ul>
-
+      <div className="banner">
+        <div className="gray-box"></div>
+        <div className="black-box"></div>
+        <div className="banner-side">
+          <div className="side-img">
+            <img src={logo} alt="" />
+          </div>
+          <p>The Access Foundation Youth Development Programs</p>
+          <div className="logo-side">
+            <img src={logo} alt="" />
+          </div>
+        </div>
+      </div>
       <div className="main-container">
         {data.map((item, idx) => {
           return (
@@ -80,7 +80,7 @@ const Index = () => {
                     </div>
                     <div className="nish-title">{item?.right?.title}</div>
                     <ul>
-                      {item?.right?.desc?.map((rightitem) => {
+                      {/* {item?.right?.desc?.map((rightitem) => {
                         return (
                           <>
                             <li className="item-list">
@@ -88,7 +88,12 @@ const Index = () => {
                             </li>
                           </>
                         );
-                      })}
+                      })} */}
+                      <div className="right-content">
+                        <p>CONTACT</p>
+                        <p>FOR</p>
+                        <p>PRICING</p>
+                      </div>
                     </ul>
                   </div>
                 </div>
@@ -96,6 +101,34 @@ const Index = () => {
             </>
           );
         })}
+      </div>
+      <div className="footer-banar">
+        <div className="contact-info">
+          <p>Questions</p>
+          <p>314-374-2358</p>
+        </div>
+        <div className="ceo">
+          <p>Keithen Stallings</p>
+          <p>CEO</p>
+        </div>
+        <form action="">
+          <input
+            type="email"
+            required={true}
+            placeholder="Enter Your Email Address"
+          />
+          <button
+            type="submit"
+            // onClick={(e) => {
+            //   e.preventDefault();
+            // }}
+          >
+            Get It
+          </button>
+        </form>
+        <div className="footer-logo">
+          <img src={logo} alt="" />
+        </div>
       </div>
     </>
   );
